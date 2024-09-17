@@ -74,3 +74,4 @@ flutter:
       fonts:
         - asset: assets/fonts/zametka.otf
 
+uses-material-design: true
