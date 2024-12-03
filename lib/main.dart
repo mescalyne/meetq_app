@@ -14,10 +14,13 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:meetbot_app/ad/ad_screen.dart';
 import 'package:meetbot_app/widgets/language_changer.dart';
 import 'package:meetbot_app/widgets/localization.dart';
+import 'package:meetbot_app/widgets/review_service.dart';
 
 void main() async {
   runApp(const MyApp());
 }
+
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -44,6 +47,7 @@ class _MyAppState extends State<MyApp> {
     ]);
     return MaterialApp(
       locale: _locale,
+      navigatorKey: navigatorKey,
       supportedLocales: LocaleType.getLocales(),
       localizationsDelegates: <LocalizationsDelegate>[
         FlutterI18nDelegate(
@@ -256,6 +260,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     } else {
                       count++;
                       await storage.write(key: advStorageKey, value: '$count');
+
+                      final nextDate =
+                          await ReviewService.getNextDateOfAskReview();
+                      if (ReviewService.isDayToday(date: nextDate)) {
+                        ReviewService.setNextDateOfAskReview(
+                            nextDate: nextDate.add(const Duration(days: 7)));
+                        await Future.delayed(const Duration(seconds: 3));
+                        showAskReviewPopup();
+                      }
                     }
 
                     if (newQuestion) {

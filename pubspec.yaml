@@ -2,7 +2,7 @@ name: meetbot_app
 description: "A new Flutter project."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.0.2+3
 
 environment:
   sdk: ^3.5.0
@@ -23,6 +23,9 @@ dependencies:
 
   google_mobile_ads: ^5.1.0   #ads
 
+  url_launcher: ^6.3.0
+
+
   #app ui
   flutter_native_splash: ^2.4.1
   flutter_launcher_icons: ^0.13.1
@@ -42,23 +45,21 @@ flutter_launcher_icons:
   ios: true
   remove_alpha_ios: true
   android: true
-  image_path_ios: "assets/elements/icon.png"
-  image_path_android: "assets/elements/icon.png"
+  image_path: "assets/elements/icon.png"
+  min_sdk_android: 21 
+  adaptive_icon_background: "assets/elements/foreground.png"
+  adaptive_icon_foreground: "assets/elements/icon.png"
+
+
 
 flutter_native_splash:
   android_gravity: clip_vertical
   color: "#1B1B1B"
-  image: assets/elements/splash.png
+  image: assets/elements/icon12.png
   color_dark: "#1B1B1B"
-  image_dark: assets/elements/splash.png
+  image_dark: assets/elements/icon12.png
   ios_content_mode: scaleAspectFill
-  android_12:
-    color: "#1B1B1B"
-    image: assets/elements/icon_splash.png
-    color_dark: "#1B1B1B"
-    image_dark: assets/elements/icon_splash.png
-
-
+ 
 flutter:
   assets:
     - assets/  

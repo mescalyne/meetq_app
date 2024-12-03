@@ -2,6 +2,10 @@
     "name": "en",
     "accept": "Accept",
     "changeQuestion": "Change question",
+    "enjoyApp": "Enjoying our App?",
+    "enjoyAppDescription": "We hope you’re having a great experience! If you like what you see, please take a moment to rate us in the store. Your feedback helps us improve and grow!",
+    "rateNow": "Rate Now",
+    "maybeLater": "Maybe Later",
     "questions": [
         "What do you think is the most important thing in life, and why?",
         "If you had the chance to change one event in your life, what would you change and why?",

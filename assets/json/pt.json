@@ -2,6 +2,10 @@
     "name": "pt",
     "accept": "Aceitar",
     "changeQuestion": "Mudar pergunta",
+    "enjoyApp": "Está gostando do nosso aplicativo?",
+    "enjoyAppDescription": "Esperamos que você esteja tendo uma ótima experiência! Se você gosta do que vê, por favor, reserve um momento para nos avaliar na loja. Seu feedback nos ajuda a melhorar e crescer!",
+    "rateNow": "Avaliar agora",
+    "maybeLater": "Talvez mais tarde",
     "questions": [
         "Qual você acha que é a coisa mais importante na vida e por quê?",
         "Se você tivesse a chance de mudar um evento na sua vida, o que você mudaria e por quê?",
